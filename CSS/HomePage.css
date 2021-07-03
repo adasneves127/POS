@@ -1,0 +1,95 @@
+html {
+  background-color: black;
+}
+body {
+  overflow: hidden;
+}
+div.Bkgrnd {
+  background: #478581;
+  position: flex;
+}
+
+.TopRunner {
+  position: flex;
+  background: #478581;
+  width: 5000px;
+  height: 120px;
+  margin: -8px -8px;
+}
+
+.LeftAscender {
+  position: flex;
+  background: #478581;
+  width: 175px;
+  height: 1000px;
+  margin: -8px -8px;
+}
+
+.StartButton {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 150px;
+  left: 200px;
+}
+.Trans {
+  background-color: green;
+}
+.Ref {
+  background-color: red;
+  top: 150px;
+  left: 375px;
+}
+
+/* Keypad Buttons*/
+
+.KeypadButton1 {
+  position: relative;
+  height: 50px;
+  width: 50px;
+}
+.KeypadButton2 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}
+.KeypadButton3 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}
+.KeypadButton4 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}
+.KeypadButton5 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}
+.KeypadButton6 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}
+.KeypadButton7 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}
+.KeypadButton8 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}
+.KeypadButton9 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}
+.KeypadButton0 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}

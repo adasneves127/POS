@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS Sign In</title>
+    <link rel="stylesheet" href="CSS/SignIn.css">
+    <div class="HeaderImg">
+        <img src="./Img/Company Logo.png" alt="DasnevesTech" class="HeaderImg">
+    </div>
+</head>
+<body>
+    <form action="VerifyAccount.php" method="post">
+        <fieldset class="FS">
+            <legend class="legend">Log In!</legend>
+            <label for="Uname" class="FormLabel">Username: </label>
+            <input type="text" name="Uname" id="Uname" class="TextBox" required="required"> <br />
+            <label for="Pword" class="FormLabel">Password: </label>
+            <input type="password" name="Pword" id="Pword" class="TextBox" required="required"> <br />
+            <input type="submit" value="Log In!" class="submit">
+        </fieldset>
+    </form>
+</body>
+</html>

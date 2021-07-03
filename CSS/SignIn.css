@@ -1,0 +1,37 @@
+/*Full Elements*/
+html {
+  background-color: #000000;
+}
+
+/*Element Specific Classes*/
+div.HeaderImg {
+  display: flex;
+}
+
+img.HeaderImg {
+  margin: 0 auto;
+  width: 20%;
+}
+
+/*Classes*/
+.FormLabel {
+  color: white;
+}
+
+.FS {
+  color: #696969;
+  border-radius: 20px;
+  width: 15%;
+}
+
+.legend {
+  color: white;
+}
+
+.TextBox {
+  border-radius: 20px;
+}
+
+.submit {
+  border-radius: 15px;
+}
