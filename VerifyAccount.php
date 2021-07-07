@@ -34,7 +34,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT EmpPWord FROM Employees where EmpUName = '$name'";
+$sql = "SELECT * FROM Employees where EmpUName = '$name'";
 echo "<br />".$sql;
 $result = $conn->query($sql);
 
@@ -44,23 +44,29 @@ if ($result->num_rows > 0) {
 
 		if($row["EmpPWord"] == $encryption)
 		{
-			echo $row["EmpPWord"];
-			$Cookname = "User";
-			$Cookvalue = $encryption;
-			setcookie("User", $Cookvalue, time()+3600);
+			setcookie("User", $encryption, time()+3600);
 			setcookie("Name", $name, time() + 3600);
-			echo "<script>window.location.href='HTML/MainPage.html';</script>";
+			setcookie("Priv", $row["EmpPriv"]);
+			setcookie("Fname", $row["EmpFName"]);
+			setcookie("Lname", $row["EmpLName"]);
+			echo "<script>window.location.href='HTML/MainPage.php';</script>";
+
+
+
 		}
 		else
 		{
-			//echo '<script> alert("Username or Password Invalid!");
-			//';
-			//echo "window.location.href='index.html';</script>";
+			echo '<script> alert("Username or Password Invalid!");
+			';
+			echo "window.location.href='index.html';</script>";
 
 		}
   	}
 	} else {
   echo "0 results";
+  echo '<script> alert("Username or Password Invalid!");
+			';
+			echo "window.location.href='index.html';</script>";
 }
 $conn->close();
 	$_SESSION["User"] = $encryption;

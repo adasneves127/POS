@@ -4,11 +4,16 @@ html {
 body {
   overflow: hidden;
 }
-div.Bkgrnd {
-  background: #478581;
-  position: flex;
-}
 
+.InfoBox {
+  position: relative;
+  top: -985px;
+  left: 1600px;
+  width: 200px;
+  z-index: 3;
+  color: white;
+  border: 5px solid #478581;
+}
 .TopRunner {
   position: flex;
   background: #478581;
@@ -25,6 +30,7 @@ div.Bkgrnd {
   margin: -8px -8px;
 }
 
+/*Buttons*/
 .StartButton {
   position: absolute;
   width: 150px;
@@ -40,56 +46,53 @@ div.Bkgrnd {
   top: 150px;
   left: 375px;
 }
-
-/* Keypad Buttons*/
-
-.KeypadButton1 {
-  position: relative;
-  height: 50px;
-  width: 50px;
+.OTill {
+  background-color: yellow;
+  top: 150px;
+  left: 550px;
 }
-.KeypadButton2 {
-  position: absolute;
-  height: 50px;
-  width: 50px;
+.ATill {
+  background-color: yellow;
+  top: 150px;
+  left: 725px;
 }
-.KeypadButton3 {
-  position: absolute;
-  height: 50px;
-  width: 50px;
+.CTill {
+  background-color: yellow;
+  top: 150px;
+  left: 900px;
 }
-.KeypadButton4 {
-  position: absolute;
-  height: 50px;
-  width: 50px;
+.CPull {
+  background-color: cyan;
+  top: 150px;
+  left: 1075px;
 }
-.KeypadButton5 {
-  position: absolute;
-  height: 50px;
-  width: 50px;
+.NoSale {
+  background-color: pink;
+  top: 150px;
+  left: 1250px;
 }
-.KeypadButton6 {
-  position: absolute;
-  height: 50px;
-  width: 50px;
+.PaidI {
+  background-color: purple;
+  top: 150px;
+  left: 1425px;
 }
-.KeypadButton7 {
-  position: absolute;
-  height: 50px;
-  width: 50px;
+.PaidO {
+  background-color: purple;
+  top: 325px;
+  left: 200px;
 }
-.KeypadButton8 {
-  position: absolute;
-  height: 50px;
-  width: 50px;
+.ViewDB {
+  background-color: orange;
+  top: 325px;
+  left: 375px;
 }
-.KeypadButton9 {
-  position: absolute;
-  height: 50px;
-  width: 50px;
+.VSource {
+  background-color: cornflowerblue;
+  top: 325px;
+  left: 725px;
 }
-.KeypadButton0 {
-  position: absolute;
-  height: 50px;
-  width: 50px;
+.NewEmp {
+  background-color: cornflowerblue;
+  top: 325px;
+  left: 550px;
 }

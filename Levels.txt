@@ -1,0 +1,46 @@
+10 - Tech Support
+    {
+        Has full control over the system
+    }
+9 - Store Owner
+    {
+        Can only modify items not set by corporate, for example
+        can edit Prices, can't edit UPC Codes.
+    }
+8 - Backend Manager
+    {
+        Can modify almost any item in the Database
+    }
+7 - Store Manager
+    {
+        Can perform any transaction type on the front end.
+    }
+6 - Superuser
+    {
+        Can perform any transaction type on the front end, except for
+        Paid In/Paid Out
+    }
+5 - Hypervisor
+    {
+        Can perform any transaction on the front end, excluding 
+        Cash Pulls
+    }
+4 - Supervisor
+    {
+        Can perform any transaction on the front end excluding closing
+        a till
+    }
+3 - Training Supervisor
+    {
+        Has same privilages as a Supervisor, except that they need both
+        their authorization code, as well as a Supervisor
+    }
+2 - Cashier
+    {
+        Can start a regular transaction.
+    }
+1 - Training Cashier
+    {
+        Can start a regular transaction, however, someone needs to be 
+        co-signed in with them.
+    }
