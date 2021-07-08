@@ -2,6 +2,7 @@ html {
   background-color: black;
 }
 body {
+  background-color: black;
   overflow: hidden;
 }
 
@@ -95,4 +96,22 @@ body {
   background-color: cornflowerblue;
   top: 325px;
   left: 550px;
+}
+
+.CosignR {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  top: 40px;
+  left: 1700px;
+  border-radius: 20px;
+}
+
+.CoSignE {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  top: 40px;
+  left: 1700px;
+  border-radius: 20px;
 }

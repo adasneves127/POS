@@ -5,9 +5,23 @@ $name = $_COOKIE["Name"];
 $EmpPriv = $_COOKIE["Priv"];
 $EmpFName = $_COOKIE["Fname"];
 $EmpLName = $_COOKIE["Lname"];
+$CoSignName = $_COOKIE["CSFname"];
+$CoSignPriv = $_COOKIE["CSPriv"];
 
 $CoSignerRegular = FALSE;
 $CoSignerElevated = FALSE;
+
+if($CoSignPriv > $EmpPriv)
+{
+    if($CoSignPriv >= 4)
+    {
+        $CoSignerElevated = TRUE;
+    }
+    if($CoSignPriv >= 2)
+    {
+        $CoSignerRegular = TRUE;
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +35,11 @@ $CoSignerElevated = FALSE;
         <div class="LeftAscender"></div>
 
         <?php 
+        if($EmpPriv == 1 and $CoSignerRegular == FALSE)
+        {
+            
+            echo('<button id="CSign" class="CosignR">Co-Sign in</button>');            
+        }
         if($EmpPriv >= 2 or $CoSignerRegular == TRUE)
         {
             echo('<button id="TStart" class="StartButton Trans">Begin Transaction</button>');
@@ -113,7 +132,16 @@ $CoSignerElevated = FALSE;
         
 
         <script>
+        function CoSignIn()
+        {
+            window.location.href = "CoSign.php";
+        }
+        
             <?php 
+            if($EmpPriv == 1 and $CoSignerRegular == FALSE)
+        {
+            echo('document.getElementById("CSign").addEventListener("click", CoSignIn);');   
+        }
                 if($EmpPriv >= 2 or $CoSignerRegular == TRUE)
                 {
                     echo('function hello() {
