@@ -12,7 +12,7 @@ if($EmpPriv >= 1)
 }
 else
 {
-    echo "<script> window.location.href = '../../../index.html';";
+    echo "<script> window.location.href = '../../../index.html'; </script>";
 }
 
 ?>
@@ -20,7 +20,8 @@ else
 
 <html>
     <head>
-        <link rel="stylesheet" href="../../CSS/TransStyle.css">
+        <link rel="stylesheet" href="..\..\CSS\TransStyle.css">
+        <title>Transaction In Progress</title>
     </head>
     <body>
         <div class="RightNavBar"></div>
