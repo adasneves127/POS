@@ -1,0 +1,14 @@
+html {
+  background-color: black;
+  overflow: hidden;
+}
+div {
+  position: absolute;
+}
+.RightNavBar {
+  background-color: #478581;
+  width: 250px;
+  height: 1080px;
+  top: 0px;
+  right: 0px;
+}

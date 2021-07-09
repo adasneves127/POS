@@ -5,21 +5,21 @@ $name = $_COOKIE["Name"];
 $EmpPriv = $_COOKIE["Priv"];
 $EmpFName = $_COOKIE["Fname"];
 $EmpLName = $_COOKIE["Lname"];
-$CoSignName = $_COOKIE["CSFname"];
-$CoSignPriv = $_COOKIE["CSPriv"];
+$CoSignName = $_COOKIE["CoSignName"];
+$CoSignPriv = $_COOKIE["CoSignPriv"];
 
 $CoSignerRegular = FALSE;
 $CoSignerElevated = FALSE;
 
 if($CoSignPriv > $EmpPriv)
 {
-    if($CoSignPriv >= 4)
-    {
-        $CoSignerElevated = TRUE;
-    }
-    if($CoSignPriv >= 2)
+    if($EmpPriv == 1)
     {
         $CoSignerRegular = TRUE;
+    }
+    if($CoSignPriv == 3)
+    {
+        $CoSignerElevated = TRUE;
     }
 }
 ?>
@@ -139,6 +139,10 @@ if($CoSignPriv > $EmpPriv)
         
             <?php 
             if($EmpPriv == 1 and $CoSignerRegular == FALSE)
+        {
+            echo('document.getElementById("CSign").addEventListener("click", CoSignIn);');   
+        }
+        if($EmpPriv == 3 and $CoSignerElevated == FALSE)
         {
             echo('document.getElementById("CSign").addEventListener("click", CoSignIn);');   
         }
