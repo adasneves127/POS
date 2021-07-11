@@ -5,10 +5,41 @@ html {
 div {
   position: absolute;
 }
+
 .RightNavBar {
   background-color: #478581;
   width: 250px;
   height: 1080px;
   top: 0px;
   right: 0px;
+}
+
+.Trans {
+  width: 220px;
+  height: 100px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 20px;
+}
+.Cancel {
+  background: red;
+}
+.PLU {
+  background: #ffd000;
+}
+.UPC {
+  background: #ffd000;
+}
+.TendPay {
+  background: green;
+}
+.StatusBox {
+  margin-top: 0px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-left: 15px;
+  margin-top: 10px;
+  width: 220px;
+  text-align: center;
+  background: darkseagreen;
 }
