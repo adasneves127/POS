@@ -1,4 +1,5 @@
 <?php 
+//Get all of out cookies right when the site loads, yes, I know it is more efficient to use an array, but that is something we will have to deal with.
 $User = $_COOKIE["User"];
 $name = $_COOKIE["Name"];
 $EmpPriv = $_COOKIE["Priv"];
@@ -7,7 +8,7 @@ $EmpLName = $_COOKIE["Lname"];
 $CoSignName = $_COOKIE["CoSignName"];
 $CoSignPriv = $_COOKIE["CoSignPriv"];
 
-
+//If our user is actually signed in, do nothing, otherwise, go back to the home page.
 if($EmpPriv >= 1)
 {
 }
@@ -21,23 +22,25 @@ else
 
 <html>
     <head>
-        <link rel="stylesheet" href="..\..\CSS\TransStyle.css">
+        <link rel="stylesheet" href="..\..\CSS\DefaultStyle\TransStyle.css">
         <title>Transaction In Progress</title>
     </head>
     <body>
+        <!-- Creates the row of buttons on the right side of the page. -->
         <div class="RightNavBar">
             <p class="StatusBox" id="Status">Test</p>
-            <button class="Trans Cancel">Cancel Transaction</button>
+            <button class="Trans Cancel" onclick="window.location.href = '../../../HTML/MainPage.php'">Cancel Transaction</button>
             <button class="Trans PLU">PLU Query</button>
             <button class="Trans UPC">UPC Query</button>
             <button class="Trans TendPay">Tender Payment</button>
         </div>
+        <!-- Creates a white box that all of the items from the transaction will go into, plans for the future: have user customizeable colors on the terminal. -->
         <div style="width: 1600px;
                     height: 900px;
                     background: white;
                     top: 140px;
-                    left: 40px;">
-                <pre id="TransactionItems"></pre>    
+                    left: 40px;
+                    padding: -10px;"><pre id="TransactionItems" style="padding: -20px;"></pre>    
                 </div>
         <div style="top: 100px; left: 40px;">
             <label for="InputBox" style="Color: white;">Enter Next Code: </label>
@@ -46,14 +49,49 @@ else
         </div>
         
     </body>
+    
+    
+    <!-- Boring Javascript Stuff, Move Along... -->
     <script>
         document.getElementById("Status").innerHTML = "Ready for Next Entry";
         function AddItem()
         {
             console.log(document.getElementById("InputBox").value);
+            var RawText = document.getElementById("InputBox").value;
             
-            var textToAdd = document.createTextNode(document.getElementById("InputBox").value + "\n");
+            var textToAdd = document.createTextNode(GenerateItemBorder(RawText, 60, true));
             document.getElementById("TransactionItems").appendChild(textToAdd);
+        }
+        function GenerateItemBorder(Input, length, NewLine)
+        {
+            console.log(Input);
+            var Output = "";
+            var WorkingOut = Input.split("");
+
+            for (let index = 0; index < length; index++) {
+                if(index < Input.length)
+                    Output += WorkingOut[index];
+                else
+                    Output += " ";
+            }
+            Output += "|"
+            if(NewLine)
+            {
+                Output += "\n";
+            }
+
+            console.log(Output);
+            return Output;
+            
+        }
+        function ClearBox()
+        {
+            document.getElementById("TransactionItems").innerHTML = "";
+        }
+        //Box is 224 characters wide by 59 lines tall
+        function TopRows()
+        {
+            
         }
     </script>
 </html>
