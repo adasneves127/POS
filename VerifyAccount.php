@@ -49,6 +49,7 @@ if ($result->num_rows > 0) {
 			setcookie("Priv", $row["EmpPriv"]);
 			setcookie("Fname", $row["EmpFName"]);
 			setcookie("Lname", $row["EmpLName"]);
+			setcookie("Color", $row["ColorTheme"]);
 			echo "<script>window.location.href='HTML/MainPage.php';</script>";
 
 

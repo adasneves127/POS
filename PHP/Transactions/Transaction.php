@@ -1,5 +1,6 @@
 <?php 
 //Get all of out cookies right when the site loads, yes, I know it is more efficient to use an array, but that is something we will have to deal with.
+//Also, $_COOKIE won't work after the <html> tag... i wish it didn't behave like this, but that is how it is...
 $User = $_COOKIE["User"];
 $name = $_COOKIE["Name"];
 $EmpPriv = $_COOKIE["Priv"];
@@ -7,6 +8,7 @@ $EmpFName = $_COOKIE["Fname"];
 $EmpLName = $_COOKIE["Lname"];
 $CoSignName = $_COOKIE["CoSignName"];
 $CoSignPriv = $_COOKIE["CoSignPriv"];
+$ColorTheme = $_COOKIE["Color"];
 
 //If our user is actually signed in, do nothing, otherwise, go back to the home page.
 if($EmpPriv >= 1)
@@ -22,7 +24,10 @@ else
 
 <html>
     <head>
-        <link rel="stylesheet" href="..\..\CSS\DefaultStyle\TransStyle.css">
+        <?php 
+        $link = "..\..\CSS\\$ColorTheme\TransStyle.css";
+        ?>
+        <link rel="stylesheet" href=<?php echo $link ?>>
         <title>Transaction In Progress</title>
     </head>
     <body>
@@ -35,12 +40,7 @@ else
             <button class="Trans TendPay">Tender Payment</button>
         </div>
         <!-- Creates a white box that all of the items from the transaction will go into, plans for the future: have user customizeable colors on the terminal. -->
-        <div style="width: 1600px;
-                    height: 900px;
-                    background: white;
-                    top: 140px;
-                    left: 40px;
-                    padding: -10px;"><pre id="TransactionItems" style="padding: -20px;"></pre>    
+        <div class="TransItems"><pre id="TransactionItems" style="padding: -20px;"></pre>    
                 </div>
         <div style="top: 100px; left: 40px;">
             <label for="InputBox" style="Color: white;">Enter Next Code: </label>

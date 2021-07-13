@@ -7,6 +7,7 @@ $EmpFName = $_COOKIE["Fname"];
 $EmpLName = $_COOKIE["Lname"];
 $CoSignName = $_COOKIE["CoSignName"];
 $CoSignPriv = $_COOKIE["CoSignPriv"];
+$ColorTheme = $_COOKIE["Color"];
 
 $CoSignerRegular = FALSE;
 $CoSignerElevated = FALSE;
@@ -27,7 +28,10 @@ if($CoSignPriv > $EmpPriv)
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="../CSS/HomePage.css">
+        <?php 
+        $Color = "../CSS/$ColorTheme/HomePage.css"
+        ?>
+        <link rel="stylesheet" href=<?php echo $Color?>>
         <title>Register</title>
     </head>
     <body>
