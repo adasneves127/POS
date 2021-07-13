@@ -1,5 +1,6 @@
 <?php 
-//Get all of out cookies right when the site loads, yes, I know it is more efficient to use an array, but that is something we will have to deal with.
+//Get all of out cookies right when the site loads, yes, I know it is more efficient to use an array, but that is something we will have to deal with. PHP arrays
+//hurt my head.
 //Also, $_COOKIE won't work after the <html> tag... i wish it didn't behave like this, but that is how it is...
 $User = $_COOKIE["User"];
 $name = $_COOKIE["Name"];
@@ -35,6 +36,7 @@ else
         <div class="RightNavBar">
             <p class="StatusBox" id="Status">Test</p>
             <button class="Trans Cancel" onclick="window.location.href = '../../../HTML/MainPage.php'">Cancel Transaction</button>
+            <button class="Trans Void">Void</button>
             <button class="Trans PLU">PLU Query</button>
             <button class="Trans UPC">UPC Query</button>
             <button class="Trans TendPay">Tender Payment</button>

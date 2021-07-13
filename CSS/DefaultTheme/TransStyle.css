@@ -22,7 +22,7 @@ div {
   margin-top: 20px;
 }
 .Cancel {
-  background: red;
+  background: #ff0000;
 }
 .PLU {
   background: #ffd000;
@@ -31,7 +31,7 @@ div {
   background: #ffd000;
 }
 .TendPay {
-  background: green;
+  background: #008000;
 }
 .StatusBox {
   margin-top: 0px;
@@ -41,7 +41,7 @@ div {
   margin-top: 10px;
   width: 220px;
   text-align: center;
-  background: darkseagreen;
+  background: #8fbc8f;
 }
 #TransactionItems {
   position: absolute;
