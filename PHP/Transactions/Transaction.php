@@ -13,16 +13,10 @@ $ColorTheme = $_COOKIE["Color"];
 
 //If our user is actually signed in, do nothing, otherwise, go back to the home page.
 if($EmpPriv >= 1)
-{
-}
+{}
 else
-{
-    echo "<script> window.location.href = '../../../index.html'; </script>";
-}
-
+{echo "<script> window.location.href = '../../../index.html'; </script>";}
 ?>
-
-
 <html>
     <head>
         <?php 
@@ -51,8 +45,7 @@ else
         </div>
         
     </body>
-    
-    
+
     <!-- Boring Javascript Stuff, Move Along... -->
     <script>
         document.getElementById("Status").innerHTML = "Ready for Next Entry";
