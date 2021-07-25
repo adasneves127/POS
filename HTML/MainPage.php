@@ -236,23 +236,6 @@ if($CoSignPriv > $EmpPriv)
                 document.getElementById("ViewSource").addEventListener("click", ViewSource);');
                 }
             ?>
-            
-            
-
-            
-                
-                
-                
-                
-                
-
-                
-                
-                
-                
-                
-                
-                
                 
         </script>
 
@@ -265,7 +248,7 @@ function ReadDataNE($query, $data)
     $servername = "localhost:3308";
     $username = "prgmUsr";
     $password = "Program123!";
-    $dbname = "BankofPilla";
+    $dbname = "POS";
     echo $query."<br \>".$data;
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -291,7 +274,7 @@ function ReadData($query, $data)
     $servername = "localhost:3308";
     $username = "prgmUsr";
     $password = "Program123!";
-    $dbname = "BankofPilla";
+    $dbname = "POS";
     echo $query."<br \>".$data;
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
